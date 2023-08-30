@@ -203,26 +203,62 @@
 // }
 
 
-function funcMasGrande(numeros) {
-    let sigue = true;
+// function funcMasGrande(numeros) {
+//     let sigue = true;
 
-    while (sigue) {
-        sigue = false;
+//     while (sigue) {
+//         sigue = false;
 
-        for (let i = 0; i < numeros.length - 1; i++) {
+//         for (let i = 0; i < numeros.length - 1; i++) {
 
-            if (numeros[i] > numeros[i + 1]) {
+//             if (numeros[i] > numeros[i + 1]) {
 
-                let refe = numeros[i];
-                numeros[i] = numeros[i + 1];
-                numeros[i + 1] = refe;
-                sigue = true;
-            }
-        }
-    }
+//                 let refe = numeros[i];
+//                 numeros[i] = numeros[i + 1];
+//                 numeros[i + 1] = refe;
+//                 sigue = true;
+//             }
+//         }
+//     }
 
-    return numeros[numeros.length - 1];
-}
+//     return numeros[numeros.length - 1];
+// }
 
-const resultados = [16, 9, 8, 5, 1];
-console.log(funcMasGrande(resultados)); 
+// const resultados = [16, 9, 8, 5, 1];
+// console.log(funcMasGrande(resultados)); 
+
+
+// HAS OWN PROPERTY
+// var libro = { autor: 'Borges', genero: 'Policial', año: 1990 };
+// var tienePropiedad = libro.hasOwnProperty('autor');
+
+// console.log(tienePropiedad);
+
+// // KEYS
+// // var libro = { autor: 'Borges', genero: 'Policial', año: 1990 };
+// var todasLasPropiedades = Object.keys(libro);
+
+// console.log(todasLasPropiedades);
+
+// var mundo = { autor: 'Borges', genero: 'Policial', año: 1990 };
+
+// for (let prop in mundo) {
+//     console.log('Esta es la propiedad: ', prop);
+//     console.log('Este es el valor: ', mundo[prop]);
+//  }
+
+ //THIS
+
+
+var mascota = {
+    animal: 'Perro',
+    raza: 'Ovejero Alemán',
+    amistoso: true,
+    dueño: 'María López',
+    info: function(){
+        // var pito = mascota;
+       console.log('Mi perro es un  ' + this.raza);
+    },
+ };
+
+ mascota.info();
